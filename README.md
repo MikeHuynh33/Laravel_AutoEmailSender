@@ -1,7 +1,7 @@
 # Laravel_AutoEmailSender
 - Laravel_AutoEmailSender contains 2 option for login  ( Staff or Admin). 
-        - [x] Staff will be able to contribute or upload their work.
-        - [x] Staff will be able to change password or edit their profile.
+  - [x] Staff will be able to contribute or upload their work.
+  - [x] Staff will be able to change password or edit their profile.
         - [x] Admin will be able to register staff account.
         - [x] Admin will have it own dashboard. 
         - [x] Staff will be redirected to their own dashboard after login. 
