@@ -1,5 +1,5 @@
 # Laravel_AutoEmailSender
-- Laravel_AutoEmailSender contains 2 options for login  ( Staff or Admin). 
+- Laravel_AutoEmailSender contains 2 options for login  ( Staff or Admin) Using breeze , Laravel Build-In Auth. 
   - [x] Staff will be able to contribute or upload their work.
   - [x] Staff will be able to change password or edit their profile.
   - [x] Admin will be able to register staff account.
