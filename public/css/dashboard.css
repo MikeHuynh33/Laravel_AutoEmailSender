@@ -1,0 +1,42 @@
+
+.first-box {
+    background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+}
+.second-box {
+    background-image: linear-gradient(135deg, #2AFADF 10%, #4C83FF 100%)
+}
+.third-box{
+    background-image: linear-gradient(135deg, #FFD3A5 10%, #FD6585 100%);
+}
+.fourth-box{
+    background-image: linear-gradient(135deg, #EE9AE5 10%, #5961F9 100%);
+}
+
+.Dashboard-sidebar{
+    position: fixed;
+    top:50px;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 1em;
+    padding: 0 3.5em 0 1em ;
+    gap:2em;
+}
+.iframe-custom{
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+        transform-origin: 0 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+}
+.iframe-custom-sm{
+    width: 100%;
+    height: auto;
+    transform: scale(0.7);
+    transform-origin: 0 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

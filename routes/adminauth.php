@@ -43,7 +43,7 @@ Route::middleware('guest:admin')->group(function () {
     ])->name('admin.password.store');
 });
 // gruops under WHO ARE authenticated as ADMIN, they are allowed to do these tasks,
-Route::middleware('auth:admin')->group(function () {
+Route::middleware('auth.admin:admin')->group(function () {
     Route::get(
         'admin/verify-email',
         EmailVerificationPromptController::class
