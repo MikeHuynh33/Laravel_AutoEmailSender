@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mx-4 ">
     <div class="d-flex justify-content-end ">
         <div class="me-3">
             <button class="btn btn-primary" wire:click="Campaign_handleCLick" type="button">Create New Campaign</button>

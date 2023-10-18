@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <ol class="breadcrumb p-2" style="background-color: #e9ecef">
+        <ol class="breadcrumb ms-5 p-2" style="background-color: #e9ecef">
             <li class="breadcrumb-item fs-4">
                 Dashboard
             </li>

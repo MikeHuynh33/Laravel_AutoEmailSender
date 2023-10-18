@@ -11,6 +11,5 @@
             </li>
         </ol>
         @livewire('table-chart', ['chartData' => $users])
-
     </div>
 @endsection

@@ -50,7 +50,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($first10Recipients as $row)
+                @foreach ($first5Recipients as $row)
                     <tr>
                         @foreach ($row as $value)
                             <td>{{ $value }}</td>
@@ -70,7 +70,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($last10Recipients as $row)
+                @foreach ($last5Recipients as $row)
                     <tr>
                         @foreach ($row as $value)
                             <td>{{ $value }}</td>

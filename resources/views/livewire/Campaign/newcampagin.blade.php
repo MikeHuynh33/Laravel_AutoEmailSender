@@ -60,7 +60,6 @@
                 <label for="status" class="form-label">Status</label>
                 <select wire:model="status" class="form-control" id="status" name="status" required>
                     <option value="active">Active</option>
-                    <option value="complete">Complete</option>
                     <option value="pending" selected>Pending</option>
                 </select>
                 <div class="text-danger fs-5">

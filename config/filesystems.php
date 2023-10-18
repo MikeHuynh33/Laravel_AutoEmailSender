@@ -41,6 +41,10 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'resources_views' => [
+            'driver' => 'local',
+            'root' => base_path('resources/views/email_templates'),
+        ],
 
         's3' => [
             'driver' => 's3',

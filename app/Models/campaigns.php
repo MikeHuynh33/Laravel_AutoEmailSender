@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Recipients;
+use App\Models\CampaignStatus;
 class campaigns extends Model
 {
     protected $table = 'campaigns';
@@ -24,6 +25,10 @@ class campaigns extends Model
             Recipients::class,
             'campaigns_recipients'
         )->withTimestamps();
+    }
+    public function campaignStatus()
+    {
+        return $this->hasOne(CampaignStatus::class, 'campaign_id');
     }
     protected $casts = [
         'start_date' => 'datetime',

@@ -17,8 +17,8 @@ class Newrecipientform extends Component
     public $listCampaign;
     public $listCampaignWithRep;
     public $hiddenForm = true;
-    public $first10Recipients;
-    public $last10Recipients;
+    public $first5Recipients;
+    public $last5Recipients;
     public function mount()
     {
         $this->listCampaign = Campaigns::All();
@@ -39,8 +39,8 @@ class Newrecipientform extends Component
                 $this->excelFile
             )[0];
             $this->hiddenForm = false;
-            $this->first10Recipients = collect($this->data)->take(5);
-            $this->last10Recipients = collect($this->data)->slice(-5);
+            $this->first5Recipients = collect($this->data)->take(5);
+            $this->last5Recipients = collect($this->data)->slice(-5);
         } catch (\Exception $e) {
             session()->flash(
                 'error',

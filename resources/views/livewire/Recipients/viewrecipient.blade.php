@@ -1,4 +1,4 @@
-<div>
+<div class="row mt-5 mx-5">
     @php
         $titles = ['Title', 'Start_date', 'End_date', 'Number_Recipients'];
     @endphp

@@ -11,7 +11,8 @@ class TemplateUpload extends Component
     public $htmlFile;
     public $htmlFileName;
     public $fileContents = '';
-
+    public $filePathReview;
+    public $IframeReview = false;
     public function render()
     {
         return view('livewire.templates.template-upload');
@@ -24,13 +25,25 @@ class TemplateUpload extends Component
                 'htmlFile' => 'required|file|mimes:html',
             ]);
 
-            // Store the uploaded HTML file in the "email_template" folder
+            // Store the uploaded HTML file in the "email_templates" folder within the "public" disk
             $path = $this->htmlFile->storeAs(
                 'email_templates',
                 $this->htmlFileName . '.html',
                 'public'
             );
-            // Save the tempalte name and directory in database.
+
+            // Construct the destination path within the "resources/views/email_templates" directory
+            $destinationPath = $this->htmlFileName . '.blade.php';
+            // Because the mailable does not want to go in public to grab template , so I have created copy of html and store in resource/views/ and replaced the end with blade. view.
+            $filePath = 'email_templates/' . $this->htmlFileName . '.html';
+            $this->filePathReview = $filePath;
+            $this->IframeReview = true;
+            $fileContents = Storage::disk('public')->get($filePath);
+            // Move the file from the "public" disk to the "resources/views/email_templates" directory
+            Storage::disk('resources_views')->put(
+                $destinationPath,
+                $fileContents
+            );
             EmailTemplate::create([
                 'template_name' => $this->htmlFileName,
                 'directory' => $path, // Store the file path
